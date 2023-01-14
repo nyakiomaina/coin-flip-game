@@ -6,13 +6,13 @@ enum Coin {
 }
 
 fn flip_coin() -> Coin {
-    if rand::random() {
+    if rand::random() { // randomly generate coin variants
         Coin::Heads
     } else{
         Coin::Tails
     }
 }
-
+// primpt the user to to input their guess and compare it to the result of coin flip
 fn play_game() {
     println!("Welcome to coin flip game!");
     println!("Guess the outcome of the cin flip game (Heads ro Tails): ");
@@ -33,7 +33,7 @@ fn play_game() {
         println!("You lose! The coin landed on {}", coin_flip_str);
     }
 }
-
+// display the number of wins and losses after the game ends
 fn display_stats(wins: u32, losses: u32) {
     println!("\n\nNumber of wins: {}", wins);
     println!("\n\nNumber of losses is: {}", losses);
